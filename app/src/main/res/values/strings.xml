@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Appgebrueht</string>
+    <string name="title_activity_rezept_uebersicht">Rezept Übersicht</string>
 </resources>
