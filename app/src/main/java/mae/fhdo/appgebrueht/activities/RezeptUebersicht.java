@@ -14,8 +14,12 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.db.RezeptManager;
+import mae.fhdo.appgebrueht.entities.Rezept;
 
 public class RezeptUebersicht extends AppCompatActivity {
     @Override
@@ -23,15 +27,21 @@ public class RezeptUebersicht extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rezept_uebersicht);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ListView foodListView = (ListView) findViewById(R.id.foodList);
         setSupportActionBar(toolbar);
 
         RezeptManager rezeptManager = RezeptManager.getInstance(this);
+        List<String> foods = new ArrayList<String>();
 
-        String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
+        for(Rezept rezept :rezeptManager.getAllRezept()) {
+            foods.add(rezept.getTitel());
+        }
+
         ListAdapter foodAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, foods);
-        ListView foodListView = (ListView) findViewById(R.id.foodList);
         foodListView.setAdapter(foodAdapter);
 
+        // Event Handler
+        // -------------------
         foodListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override

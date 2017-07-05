@@ -2,6 +2,9 @@ package mae.fhdo.appgebrueht.db;
 
 import android.content.Context;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 /**
@@ -17,7 +20,8 @@ public class RezeptManager {
     private DBManager dbManager;
 
     private RezeptManager(Context context) {
-        
+        this.context = context;
+        dbManager = DBManager.getInstance(context);
     }
 
     public static RezeptManager getInstance(Context context){
@@ -50,4 +54,17 @@ public class RezeptManager {
         return null;
     }
 
+    public List<Rezept> getAllRezept(){
+        // TODO: Rezepte aus DB
+
+        List<Rezept> list_Rezepte = new ArrayList<Rezept>();
+
+        list_Rezepte.add(new Rezept("Lasagne"));
+        list_Rezepte.add(new Rezept("Nudelsalat"));
+        list_Rezepte.add(new Rezept("Nudelauflauf"));
+        list_Rezepte.add(new Rezept("Spaghetti Bolognese"));
+        list_Rezepte.add(new Rezept("Vegetarische Bouletten"));
+
+        return list_Rezepte;
+    }
 }

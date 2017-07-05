@@ -12,14 +12,14 @@ public class Rezept implements IRezept{
     private int likes; // Gesamtanzahl der Likes
     private String beschreibung;
 
-    public Rezept(String name)
+    public Rezept(String titel)
     {
         this.titel = titel;
         this.likes = 0;
         this.beschreibung = "Neues Rezept";
     }
 
-    public Rezept(String name, String beschreibung)
+    public Rezept(String titel, String beschreibung)
     {
         this.titel = titel;
         this.likes = 0;

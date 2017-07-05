@@ -10,9 +10,6 @@ public class DataGenerator {
     }
 
     public void generateData(){
-        // TODO: Generate Benutzer
-        // TODO: Generate Rezept
-        // TODO: Generate Like
-        // TODO: Generate Foto
+
     }
 }
