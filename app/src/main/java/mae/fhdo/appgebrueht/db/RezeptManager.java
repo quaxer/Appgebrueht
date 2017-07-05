@@ -46,12 +46,20 @@ public class RezeptManager {
 
     public Rezept getRezeptById(int id){
         // TODO
-        return null;
+
+        // ! Testdaten !
+        return new Rezept("Lasagne");
+
+        //return null;
     }
 
     public Rezept getRezeptByTitel(String titel) {
         // TODO
-        return null;
+
+        // ! Testdaten !
+        return new Rezept("Lasagne");
+
+        //return null;
     }
 
     public List<Rezept> getAllRezept(){
