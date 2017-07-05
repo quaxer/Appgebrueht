@@ -1,4 +1,4 @@
-package mae.fhdo.appgebrueht;
+package mae.fhdo.appgebrueht.db;
 
 /**
  * Created by Marvin Jakob.

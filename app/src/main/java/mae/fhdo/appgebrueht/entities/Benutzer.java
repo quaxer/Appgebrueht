@@ -1,10 +1,12 @@
 package mae.fhdo.appgebrueht.entities;
 
+import mae.fhdo.appgebrueht.entities.interfaces.IBenutzer;
+
 /**
  * Created by Marvin Jakob.
  */
 
-public class Benutzer {
+public class Benutzer implements IBenutzer{
     private int _id;
     private String benutzername;
     private String eMail;

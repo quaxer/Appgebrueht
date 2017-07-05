@@ -1,10 +1,12 @@
 package mae.fhdo.appgebrueht.entities;
 
+import mae.fhdo.appgebrueht.entities.interfaces.IRezept;
+
 /**
  * Created by Marvin Jakob.
  */
 
-public class Rezept {
+public class Rezept implements IRezept{
     private int _id;
     private String titel;
     private int likes; // Gesamtanzahl der Likes

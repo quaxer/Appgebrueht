@@ -1,4 +1,4 @@
-package mae.fhdo.appgebrueht.interfaces;
+package mae.fhdo.appgebrueht.db.interfaces;
 
 /**
  * Created by Marvin Jakob.

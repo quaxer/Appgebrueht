@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".RezeptUebersicht"
+            android:name=".activities.RezeptUebersicht"
             android:label="@string/title_activity_rezept_uebersicht"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

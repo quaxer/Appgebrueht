@@ -1,6 +1,6 @@
-package mae.fhdo.appgebrueht;
+package mae.fhdo.appgebrueht.db;
 
-import mae.fhdo.appgebrueht.interfaces.RezeptColumns;
+import mae.fhdo.appgebrueht.db.interfaces.RezeptColumns;
 
 /**
  * Created by Marvin Jakob.

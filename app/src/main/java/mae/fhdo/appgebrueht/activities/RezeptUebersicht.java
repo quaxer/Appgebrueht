@@ -1,9 +1,10 @@
-package mae.fhdo.appgebrueht;
+package mae.fhdo.appgebrueht.activities;
+
+/**
+ * Created by Marvin Jakob.
+ */
 
 import android.os.Bundle;
-import android.os.Message;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,8 +14,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class RezeptUebersicht extends AppCompatActivity {
+import mae.fhdo.appgebrueht.R;
 
+public class RezeptUebersicht extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
