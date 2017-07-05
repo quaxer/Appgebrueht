@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import mae.fhdo.appgebrueht.db.table.RezeptTbl;
+
 /**
  * Created by Marvin Jakob.
  */
@@ -40,6 +42,4 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL(RezeptTbl.SQL_DROP);
         onCreate(db);
     }
-
-
 }

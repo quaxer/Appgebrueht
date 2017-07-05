@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import mae.fhdo.appgebrueht.R;
+import mae.fhdo.appgebrueht.db.RezeptManager;
 
 public class RezeptUebersicht extends AppCompatActivity {
     @Override
@@ -23,6 +24,8 @@ public class RezeptUebersicht extends AppCompatActivity {
         setContentView(R.layout.activity_rezept_uebersicht);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        RezeptManager rezeptManager = RezeptManager.getInstance(this);
 
         String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
         ListAdapter foodAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, foods);

@@ -4,7 +4,7 @@ package mae.fhdo.appgebrueht.db.interfaces;
  * Created by Marvin Jakob.
  */
 
-public interface RezeptColumns {
+public interface IRezeptColumns {
     String ID = "_id";
     String TITEL = "titel";
     String LIKES = "likes";

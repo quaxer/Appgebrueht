@@ -1,12 +1,12 @@
-package mae.fhdo.appgebrueht.db;
+package mae.fhdo.appgebrueht.db.table;
 
-import mae.fhdo.appgebrueht.db.interfaces.RezeptColumns;
+import mae.fhdo.appgebrueht.db.interfaces.IRezeptColumns;
 
 /**
  * Created by Marvin Jakob.
  */
 
-public class RezeptTbl implements RezeptColumns {
+public class RezeptTbl implements IRezeptColumns {
     public static final String TABLE_NAME = "rezept";
 
     public static final String SQL_CREATE =
