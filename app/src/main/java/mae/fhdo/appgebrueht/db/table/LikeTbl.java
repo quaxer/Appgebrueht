@@ -7,4 +7,5 @@ import mae.fhdo.appgebrueht.db.interfaces.ILikeColumns;
  */
 
 public class LikeTbl implements ILikeColumns {
+
 }
