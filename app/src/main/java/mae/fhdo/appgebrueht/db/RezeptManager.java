@@ -5,6 +5,7 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
+import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 /**
@@ -72,11 +73,11 @@ public class RezeptManager {
 
         List<Rezept> list_Rezepte = new ArrayList<Rezept>();
 
-        list_Rezepte.add(new Rezept("Lasagne"));
-        list_Rezepte.add(new Rezept("Nudelsalat"));
-        list_Rezepte.add(new Rezept("Nudelauflauf"));
-        list_Rezepte.add(new Rezept("Spaghetti Bolognese"));
-        list_Rezepte.add(new Rezept("Vegetarische Bouletten"));
+        list_Rezepte.add(new Rezept("Lasagne", "" , R.drawable.first));
+        list_Rezepte.add(new Rezept("Nudelsalat", "" , R.drawable.first));
+        list_Rezepte.add(new Rezept("Nudelauflauf", "" , R.drawable.first));
+        list_Rezepte.add(new Rezept("Spaghetti Bolognese", "" , R.drawable.first));
+        list_Rezepte.add(new Rezept("Vegetarische Bouletten", "" , R.drawable.first));
 
         return list_Rezepte;
     }

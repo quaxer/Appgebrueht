@@ -12,6 +12,7 @@ public class Rezept implements IRezept{
     private String titel;
     private int likes; // Gesamtanzahl der Likes
     private String beschreibung;
+    private int foto;
 
     public Rezept(String titel)
     {
@@ -25,6 +26,14 @@ public class Rezept implements IRezept{
         this.titel = titel;
         this.likes = 0;
         this.beschreibung = beschreibung;
+    }
+
+    public Rezept(String titel, String beschreibung , int foto)
+    {
+        this.titel = titel;
+        this.likes = 0;
+        this.beschreibung = beschreibung;
+        this.foto = foto;
     }
 
     public int getId() {
@@ -53,5 +62,13 @@ public class Rezept implements IRezept{
 
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 }
