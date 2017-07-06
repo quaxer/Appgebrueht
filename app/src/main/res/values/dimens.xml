@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="gross">34dp</dimen>
+    <dimen name="mittel">30dp</dimen>
+    <dimen name="normal">26dp</dimen>
+    <dimen name="klein">20dp</dimen>
 </resources>

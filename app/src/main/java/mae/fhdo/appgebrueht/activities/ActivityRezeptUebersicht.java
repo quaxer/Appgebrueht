@@ -4,6 +4,7 @@ package mae.fhdo.appgebrueht.activities;
  * Created by Marvin Jakob.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -21,7 +22,7 @@ import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.db.RezeptManager;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
-public class RezeptUebersicht extends AppCompatActivity {
+public class ActivityRezeptUebersicht extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +41,17 @@ public class RezeptUebersicht extends AppCompatActivity {
         ListAdapter foodAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, foods);
         foodListView.setAdapter(foodAdapter);
 
+
+
         // Event Handler
         // -------------------
         foodListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
+
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String food = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(RezeptUebersicht.this, food, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityRezeptUebersicht.this, food, Toast.LENGTH_SHORT).show();
                     }
                 }
         );

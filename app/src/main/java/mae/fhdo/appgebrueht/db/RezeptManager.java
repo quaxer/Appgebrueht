@@ -48,7 +48,7 @@ public class RezeptManager {
         // TODO
 
         // ! Testdaten !
-        return new Rezept("Lasagne");
+        return new Rezept("Pizza", "Hier steht die Beschreibung für das Pizza-Rezept!!!");
 
         //return null;
     }

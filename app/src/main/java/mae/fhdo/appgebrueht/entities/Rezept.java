@@ -7,6 +7,7 @@ import mae.fhdo.appgebrueht.entities.interfaces.IRezept;
  */
 
 public class Rezept implements IRezept{
+
     private int _id;
     private String titel;
     private int likes; // Gesamtanzahl der Likes
