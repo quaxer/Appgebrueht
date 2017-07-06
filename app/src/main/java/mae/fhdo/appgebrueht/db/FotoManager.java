@@ -2,6 +2,7 @@ package mae.fhdo.appgebrueht.db;
 
 import android.content.Context;
 
+import mae.fhdo.appgebrueht.entities.Foto;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 /**
@@ -32,11 +33,13 @@ public class FotoManager {
         return sINSTANCE;
     }
 
-    public void getFirstFoto(Rezept rezept){
-
+    public Foto getFirstFoto(Rezept rezept){
+        // TODO
+        return null;
     }
 
-    public void getFotoList(Rezept rezept){
-
+    public Foto getFotoList(Rezept rezept){
+        // TODO
+        return null;
     }
 }
