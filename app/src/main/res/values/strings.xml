@@ -4,4 +4,15 @@
     <string name="rezept_liken_activity_rezept_detailansicht">Liken</string>
     <string name="rezept_disliken_activity_rezept_detailansicht">Disliken</string>
     <string name="rezept_foto_machen_activity_rezept_detailansicht">Foto machen</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_test_menu">TestMenu</string>
+    <string name="title_activity_testi">Testi</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

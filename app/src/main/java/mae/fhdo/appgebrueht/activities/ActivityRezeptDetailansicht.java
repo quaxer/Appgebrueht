@@ -5,15 +5,15 @@ package mae.fhdo.appgebrueht.activities;
  */
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import mae.fhdo.appgebrueht.R;
-import mae.fhdo.appgebrueht.adapter.ImageAdapter;
+import mae.fhdo.appgebrueht.activities.adapter.ImageAdapter;
 import mae.fhdo.appgebrueht.db.RezeptManager;
 import mae.fhdo.appgebrueht.entities.Rezept;
 

@@ -1,8 +1,8 @@
 package mae.fhdo.appgebrueht.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.db.DataGenerator;

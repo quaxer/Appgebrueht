@@ -8,15 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.adapter.RezeptListAdapter;
@@ -24,6 +22,7 @@ import mae.fhdo.appgebrueht.db.RezeptManager;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 public class ActivityRezeptUebersicht extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +48,45 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+
+    // Initiating Menu XML file (menu.xml)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.nav, menu);
+        return true;
+    }
+
+    /**
+     * Event Handling for Individual menu item selected
+     * Identify single menu item by it's id
+     * */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menu_rezepte:
+
+                if(this.getClass() != ActivityRezeptUebersicht.class){
+                    startActivity(new Intent(this, ActivityRezeptUebersicht.class));
+                }
+
+                //Toast.makeText(ActivityRezeptUebersicht.this, "Rezept Übersicht ist ausgewählt", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.menu_hot_or_not:
+                startActivity(new Intent(this, ActivityRezeptUebersicht.class));
+
+                //Toast.makeText(ActivityRezeptUebersicht.this, "Hot or Not ist ausgewählt", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

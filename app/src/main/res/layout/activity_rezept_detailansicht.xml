@@ -111,17 +111,6 @@ tools:context="mae.fhdo.appgebrueht.activities.ActivityRezeptDetailansicht" >
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/rezeptFotoDisliken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/rezept_disliken_activity_rezept_detailansicht"
-        android:onClick="onDislike"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/rezeptLiken" />
-
-    <Button
         android:id="@+id/rezeptLiken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,8 +118,12 @@ tools:context="mae.fhdo.appgebrueht.activities.ActivityRezeptDetailansicht" >
         android:text="@string/rezept_liken_activity_rezept_detailansicht"
         android:onClick="onLike"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/rezeptFotoDisliken"
-        app:layout_constraintLeft_toRightOf="@+id/rezeptFotoMachen" />
+        app:layout_constraintLeft_toRightOf="@+id/rezeptFotoMachen"
+        android:layout_marginLeft="149dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>
