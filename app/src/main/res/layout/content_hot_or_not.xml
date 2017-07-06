@@ -62,6 +62,7 @@
         android:layout_width="347dp"
         android:layout_height="61dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintTop_toTopOf="parent"

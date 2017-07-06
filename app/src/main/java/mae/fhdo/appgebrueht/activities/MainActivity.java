@@ -22,11 +22,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, ActivityRezeptUebersicht.class);
         startActivity(i);
 
-        // REZEPTDETAILANSICHT BEISPIEL
-        /*
-        Intent i = new Intent(this, ActivityRezeptDetailansicht.class);
-        i.putExtra("rezeptId", 1);
-        startActivity(i);
-        */
     }
 }

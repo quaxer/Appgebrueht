@@ -82,10 +82,5 @@ public class ActivityRezeptDetailansicht extends AppCompatActivity {
         this.rezept.setLikes(this.rezept.getLikes() + 1);
     }
 
-    public void onDislike(View view) {
-        Toast.makeText(this, "Wurde gedisliked", Toast.LENGTH_SHORT).show();
-        this.rezept.setLikes(this.rezept.getLikes() - 1);
-    }
-
 
 }

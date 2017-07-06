@@ -82,7 +82,7 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
                 return true;
 
             case R.id.menu_hot_or_not:
-                startActivity(new Intent(this, ActivityRezeptUebersicht.class));
+                startActivity(new Intent(this, ActivityHotOrNot.class));
 
                 //Toast.makeText(ActivityRezeptUebersicht.this, "Hot or Not ist ausgewählt", Toast.LENGTH_SHORT).show();
                 return true;
