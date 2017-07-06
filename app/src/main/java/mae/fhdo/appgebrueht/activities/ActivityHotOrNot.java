@@ -46,7 +46,6 @@ public class ActivityHotOrNot extends AppCompatActivity {
         rezepte = rman.getAllRezept();
 
         ID_idx = -1;
-
         rezeptAktualisieren();
     }
 
