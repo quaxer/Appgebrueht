@@ -5,7 +5,6 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 /**
@@ -20,8 +19,11 @@ public class RezeptManager {
     private Context context;
     private DBManager dbManager;
 
+    List<Rezept> list_Rezept;
+
     private RezeptManager(Context context) {
         this.context = context;
+        this.list_Rezept = new ArrayList<Rezept>();
         dbManager = DBManager.getInstance(context);
     }
 
@@ -36,13 +38,12 @@ public class RezeptManager {
         return sINSTANCE;
     }
 
-    public Rezept addRezept(Rezept rezept){
-        // TODO
-        return null;
+    public void addRezept(Rezept rezept){
+        list_Rezept.add(rezept);
     }
 
     public void deleteRezept(Rezept rezept) {
-        // TODO
+        list_Rezept.remove(rezept);
     }
 
     public Rezept updateRezept(Rezept rezept){
@@ -51,34 +52,24 @@ public class RezeptManager {
     }
 
     public Rezept getRezeptById(int id){
-        // TODO
-
-        // ! Testdaten !
-        return new Rezept("Pizza", "Hier steht die Beschreibung für das Pizza-Rezept!!!");
-
-        //return null;
+        for(Rezept r: list_Rezept)
+        {
+            if (r.getId() == id)
+                return r;
+        }
+        return null;
     }
 
     public Rezept getRezeptByTitel(String titel) {
-        // TODO
-
-        // ! Testdaten !
-        return new Rezept("Lasagne");
-
-        //return null;
+        for(Rezept r: list_Rezept)
+        {
+            if (r.getTitel().equals(titel))
+                return r;
+        }
+        return null;
     }
 
     public List<Rezept> getAllRezept(){
-        // TODO: Rezepte aus DB
-
-        List<Rezept> list_Rezepte = new ArrayList<Rezept>();
-
-        list_Rezepte.add(new Rezept("Lasagne", "" , R.drawable.first));
-        list_Rezepte.add(new Rezept("Nudelsalat", "" , R.drawable.first));
-        list_Rezepte.add(new Rezept("Nudelauflauf", "" , R.drawable.first));
-        list_Rezepte.add(new Rezept("Spaghetti Bolognese", "" , R.drawable.first));
-        list_Rezepte.add(new Rezept("Vegetarische Bouletten", "" , R.drawable.first));
-
-        return list_Rezepte;
+        return list_Rezept;
     }
 }

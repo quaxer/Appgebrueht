@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Create Test-Data
         DataGenerator dataGenerator = new DataGenerator();
-        dataGenerator.generateData();
+        dataGenerator.generateData(getApplicationContext());
 
         // Start Application
         Intent i = new Intent(this, ActivityRezeptUebersicht.class);
