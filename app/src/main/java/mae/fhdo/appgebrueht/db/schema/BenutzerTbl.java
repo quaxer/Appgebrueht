@@ -1,4 +1,4 @@
-package mae.fhdo.appgebrueht.db.table;
+package mae.fhdo.appgebrueht.db.schema;
 
 import mae.fhdo.appgebrueht.db.interfaces.IBenutzerColumns;
 

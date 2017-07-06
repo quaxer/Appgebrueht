@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import mae.fhdo.appgebrueht.db.table.RezeptTbl;
+import mae.fhdo.appgebrueht.db.schema.RezeptTbl;
 
 /**
  * Created by Marvin Jakob.
