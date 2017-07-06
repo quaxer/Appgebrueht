@@ -44,7 +44,6 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Rezept rezept = (Rezept) parent.getItemAtPosition(position);
-                        // Toast.makeText(ActivityRezeptUebersicht.this, rezept.getTitel(), Toast.LENGTH_SHORT).show();
 
                         Intent i = new Intent(view.getContext(), ActivityRezeptDetailansicht.class);
                         i.putExtra("rezeptId", rezept.getId());

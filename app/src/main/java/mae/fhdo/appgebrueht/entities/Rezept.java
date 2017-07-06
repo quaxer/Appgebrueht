@@ -8,31 +8,36 @@ import mae.fhdo.appgebrueht.entities.interfaces.IRezept;
 
 public class Rezept implements IRezept{
 
+    private static int id_counter = 0;
+
     private int _id;
     private String titel;
     private int likes; // Gesamtanzahl der Likes
     private String beschreibung;
     private int foto;
 
-    public Rezept(String titel)
-    {
-        this.titel = titel;
+    private Rezept(){
+        this._id = id_counter;
+        id_counter++;
         this.likes = 0;
         this.beschreibung = "Neues Rezept";
     }
 
+    public Rezept(String titel)
+    {
+        this();
+        this.titel = titel;
+    }
+
     public Rezept(String titel, String beschreibung)
     {
-        this.titel = titel;
-        this.likes = 0;
+        this(titel);
         this.beschreibung = beschreibung;
     }
 
     public Rezept(String titel, String beschreibung , int foto)
     {
-        this.titel = titel;
-        this.likes = 0;
-        this.beschreibung = beschreibung;
+        this(titel, beschreibung);
         this.foto = foto;
     }
 
