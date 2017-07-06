@@ -36,8 +36,6 @@ public class ActivityHotOrNot extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         btnHot = (Button) findViewById(R.id.btnHot);
         btnNot = (Button) findViewById(R.id.btnNot);
         img = (ImageView) findViewById(R.id.rezeptImage);
