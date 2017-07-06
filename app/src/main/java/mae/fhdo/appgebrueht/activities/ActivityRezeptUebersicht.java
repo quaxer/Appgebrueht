@@ -36,6 +36,7 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
         ListAdapter rezeptAdapter = new RezeptListAdapter(getApplicationContext(), R.layout.list_item_rezept_uebersicht, rezeptManager.getAllRezept());
         rezepteListView.setAdapter(rezeptAdapter);
 
+
         // Event Handler
         // -------------------
         rezepteListView.setOnItemClickListener(
@@ -44,7 +45,11 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Rezept rezept = (Rezept) parent.getItemAtPosition(position);
-                        Toast.makeText(ActivityRezeptUebersicht.this, rezept.getTitel(), Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(ActivityRezeptUebersicht.this, rezept.getTitel(), Toast.LENGTH_SHORT).show();
+
+                        Intent i = new Intent(view.getContext(), ActivityRezeptDetailansicht.class);
+                        i.putExtra("rezeptId", rezept.getId());
+                        startActivity(i);
                     }
                 }
         );
