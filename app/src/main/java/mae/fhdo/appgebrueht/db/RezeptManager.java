@@ -19,7 +19,7 @@ public class RezeptManager {
     private Context context;
     private DBManager dbManager;
 
-    List<Rezept> list_Rezept;
+    private List<Rezept> list_Rezept;
 
     private RezeptManager(Context context) {
         this.context = context;
