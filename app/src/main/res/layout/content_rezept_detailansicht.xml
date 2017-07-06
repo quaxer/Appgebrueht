@@ -2,48 +2,32 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="mae.fhdo.appgebrueht.activities.ActivityRezeptDetailansicht"
     tools:showIn="@layout/activity_rezept_detailansicht">
 
-
-    <EditText
-        android:id="@+id/rezeptLikes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:enabled="false"
-        android:inputType="none"
-        android:textAlignment="center"
-        android:textColor="@color/ueberschrift"
-        android:textSize="@dimen/mittel"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <android.support.v4.view.ViewPager
-
         android:id="@+id/rezeptFotos"
-
-        android:layout_width="353dp"
-
-        android:layout_height="149dp"
-        android:layout_marginTop="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="153dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.529">
-
-    </android.support.v4.view.ViewPager>
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"></android.support.v4.view.ViewPager>
 
     <EditText
         android:id="@+id/rezeptTitel"
-        android:layout_width="351dp"
-        android:layout_height="60dp"
+        android:layout_width="359dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="11dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="none"
@@ -51,40 +35,71 @@
         android:textColor="@color/ueberschrift"
         android:textSize="@dimen/gross"
         android:textStyle="bold"
-        tools:layout_editor_absoluteY="193dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rezeptFotos"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+
+    <EditText
+        android:id="@+id/rezeptLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:textAlignment="center"
+        android:textColor="@color/ueberschrift"
+        android:textSize="@dimen/mittel"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rezeptTitel"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
 
     <EditText
         android:id="@+id/rezeptBeschreibung"
-        android:layout_width="359dp"
-        android:layout_height="124dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="7dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textMultiLine"
-        android:textAlignment="viewStart"
         android:textColor="@color/text"
         android:textSize="@dimen/normal"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="261dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rezeptLikes"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/rezeptFotoMachen"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:onClick="onFoto"
         android:text="@string/rezept_foto_machen_activity_rezept_detailansicht"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="393dp" />
+        tools:layout_editor_absoluteY="428dp"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/rezeptLiken"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:onClick="onLike"
         android:text="@string/rezept_liken_activity_rezept_detailansicht"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="393dp" />
-
+        tools:layout_editor_absoluteX="280dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rezeptBeschreibung" />
 
 </android.support.constraint.ConstraintLayout>
