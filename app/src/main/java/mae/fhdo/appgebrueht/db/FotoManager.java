@@ -35,7 +35,7 @@ public class FotoManager {
 
     public Foto getFirstFoto(Rezept rezept){
         // TODO
-        return null;
+        return new Foto();
     }
 
     public Foto getFotoList(Rezept rezept){
