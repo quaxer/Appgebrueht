@@ -21,20 +21,20 @@ import mae.fhdo.appgebrueht.db.RezeptManager;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
 public class ActivityRezeptUebersicht extends AppCompatActivity {
+    RezeptListAdapter rezeptAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rezept_uebersicht);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        ListView rezepteListView = (ListView) findViewById(R.id.foodList);
+        ListView rezepteListView = (ListView) findViewById(R.id.RezeptList);
         setSupportActionBar(toolbar);
 
         RezeptManager rezeptManager = RezeptManager.getInstance(getApplicationContext());
 
-        ListAdapter rezeptAdapter = new RezeptListAdapter(getApplicationContext(), R.layout.list_item_rezept_uebersicht, rezeptManager.getAllRezept());
+        rezeptAdapter = new RezeptListAdapter(getApplicationContext(), R.layout.list_item_rezept_uebersicht, rezeptManager.getAllRezept());
         rezepteListView.setAdapter(rezeptAdapter);
-
 
         // Event Handler
         // -------------------
@@ -53,6 +53,12 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
         );
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (rezeptAdapter != null)
+        rezeptAdapter.notifyDataSetChanged();
+    }
 
     // Initiating Menu XML file (menu.xml)
     @Override

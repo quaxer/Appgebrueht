@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_rezept_uebersicht">
 
     <ListView
-        android:id="@+id/foodList"
+        android:id="@+id/RezeptList"
         android:layout_width="368dp"
         android:layout_height="495dp"
         tools:layout_editor_absoluteX="816dp"
