@@ -47,7 +47,8 @@ public class RezeptManager {
     }
 
     public Rezept updateRezept(Rezept rezept){
-        // TODO
+        list_Rezept.remove(getRezeptById(rezept.getId()));
+        list_Rezept.add(rezept);
         return null;
     }
 
