@@ -6,11 +6,12 @@ import mae.fhdo.appgebrueht.entities.interfaces.ILike;
  * Created by Marvin Jakob.
  */
 
-public class Likes implements ILike {
+public class Like implements ILike {
     private int _id;
     private Rezept rezept;
     private Benutzer benutzer;
 
-    public Likes() {
+    public Like() {
+
     }
 }
