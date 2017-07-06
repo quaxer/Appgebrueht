@@ -25,6 +25,11 @@ public class RezeptTbl implements IRezeptColumns {
             "(titel,likes,beschreibung)" +
             "VALUES (?,?,?)";
 
+    public static final String REZEPT_UPDATE =
+            "UPDATE INTO " + TABLE_NAME +
+            "(titel,likes,beschreibung)" +
+            "VALUES (?,?,?)";
+
     public static final String REZEPT_DELETE =
             "DELETE " + TABLE_NAME;
 
