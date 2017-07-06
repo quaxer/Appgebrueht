@@ -50,7 +50,7 @@ public class ActivityHotOrNot extends AppCompatActivity {
     }
 
     private void rezeptAktualisieren() {
-        ID_idx = (ID_idx + 1) % rezepte.size();
+        ID_idx = ((ID_idx + 1) % rezepte.size());
         aRezept = rezepte.get(ID_idx);
         FotoManager fMan = FotoManager.getInstance(this);
 
