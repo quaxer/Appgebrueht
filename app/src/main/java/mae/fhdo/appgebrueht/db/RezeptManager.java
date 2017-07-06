@@ -44,6 +44,11 @@ public class RezeptManager {
         // TODO
     }
 
+    public Rezept updateRezept(Rezept rezept){
+        // TODO
+        return null;
+    }
+
     public Rezept getRezeptById(int id){
         // TODO
 
