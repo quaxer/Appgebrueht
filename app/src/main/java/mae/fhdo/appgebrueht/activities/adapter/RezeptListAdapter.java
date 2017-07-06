@@ -1,4 +1,4 @@
-package mae.fhdo.appgebrueht.adapter;
+package mae.fhdo.appgebrueht.activities.adapter;
 
 import android.app.Activity;
 import android.content.Context;

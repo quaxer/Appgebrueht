@@ -14,10 +14,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import mae.fhdo.appgebrueht.R;
-import mae.fhdo.appgebrueht.adapter.RezeptListAdapter;
+import mae.fhdo.appgebrueht.activities.adapter.RezeptListAdapter;
 import mae.fhdo.appgebrueht.db.RezeptManager;
 import mae.fhdo.appgebrueht.entities.Rezept;
 
