@@ -40,7 +40,6 @@ public class ActivityHotOrNot extends AppCompatActivity {
         btnNot = (Button) findViewById(R.id.btnNot);
         img = (ImageView) findViewById(R.id.rezeptImage);
 
-
         rman = RezeptManager.getInstance(this);
         rezepte = rman.getAllRezept();
 
