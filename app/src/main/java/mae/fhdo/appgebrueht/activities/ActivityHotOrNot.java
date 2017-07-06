@@ -24,7 +24,6 @@ public class ActivityHotOrNot extends AppCompatActivity {
     Button btnHot;
     Button btnNot;
     ImageView img;
-    int currentRID;
     List<Rezept> rezepte ;
     int ID_idx;
     RezeptManager rman;
@@ -49,7 +48,6 @@ public class ActivityHotOrNot extends AppCompatActivity {
         ID_idx = -1;
 
         rezeptAktualisieren();
-
     }
 
     private void rezeptAktualisieren() {
