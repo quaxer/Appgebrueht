@@ -59,15 +59,20 @@
 
     <EditText
         android:id="@+id/rezName"
+        style="@android:style/Widget.AutoCompleteTextView"
         android:layout_width="347dp"
         android:layout_height="61dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="63dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="63dp"
-        android:layout_marginLeft="19dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

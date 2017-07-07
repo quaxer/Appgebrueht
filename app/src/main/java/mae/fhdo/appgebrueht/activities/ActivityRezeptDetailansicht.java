@@ -83,7 +83,7 @@ public class ActivityRezeptDetailansicht extends AppCompatActivity {
     }
 
     public void onLike(View view) {
-        Toast.makeText(this, "Wurde gelikt", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Wurde geliked", Toast.LENGTH_SHORT).show();
         this.rezept.setLikes(this.rezept.getLikes() + 1);
         this.rezeptManager.updateRezept(this.rezept);
         this.rezeptAnzeigen();

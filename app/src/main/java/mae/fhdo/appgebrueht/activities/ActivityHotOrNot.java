@@ -77,10 +77,10 @@ public class ActivityHotOrNot extends AppCompatActivity {
         aRezept = rezepte.get(ID_idx);
         FotoManager fMan = FotoManager.getInstance(this);
 
-        Drawable img = (fMan.getFirstFoto(aRezept)).getDrawable(this);
+        //Drawable img = (aRezept.getFoto()).getDrawable(this);
 
         ((EditText) findViewById(R.id.rezName)).setText(aRezept.getTitel());
-        ((ImageView) findViewById(R.id.rezeptImage)).setImageDrawable(img);
+        ((ImageView) findViewById(R.id.rezeptImage)).setImageResource(aRezept.getFoto());
     }
 
     public void onClick (View btn) {

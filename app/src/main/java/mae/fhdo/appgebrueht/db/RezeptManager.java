@@ -47,8 +47,9 @@ public class RezeptManager {
     }
 
     public Rezept updateRezept(Rezept rezept){
+        int r_index = list_Rezept.indexOf(getRezeptById(rezept.getId()));
         list_Rezept.remove(getRezeptById(rezept.getId()));
-        list_Rezept.add(rezept);
+        list_Rezept.add(r_index, rezept);
         return null;
     }
 
