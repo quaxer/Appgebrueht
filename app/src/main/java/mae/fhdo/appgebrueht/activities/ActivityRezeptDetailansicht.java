@@ -13,10 +13,12 @@ import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -85,6 +87,14 @@ public class ActivityRezeptDetailansicht extends AppCompatActivity {
                         MY_PERMISSIONS_REQUEST_CAMERA);
             }
         }
+
+        // Beschreibungs-View anpassen
+        TextView rezeptBeschreibung = (TextView) findViewById(R.id.rezeptBeschreibung);
+        rezeptBeschreibung.setScroller(new Scroller(ActivityRezeptDetailansicht.this));
+        rezeptBeschreibung.setMaxLines(7);
+        rezeptBeschreibung.setVerticalScrollBarEnabled(true);
+        rezeptBeschreibung.setMovementMethod(new ScrollingMovementMethod());
+        rezeptBeschreibung.setFocusable(false);
     }
 
 
