@@ -62,6 +62,11 @@ public class ActivityRezeptUebersicht extends AppCompatActivity {
 
 
     @Override
+    public void onBackPressed() {
+        // Nicht zurück gehen
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         getMenuInflater().inflate(R.menu.nav, menu);

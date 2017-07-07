@@ -47,6 +47,8 @@ public class ActivityRezeptDetailansicht extends AppCompatActivity {
 
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -73,10 +75,6 @@ public class ActivityRezeptDetailansicht extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-
-
 
     public void onFoto(View view) {
         // TODO Start Kamera

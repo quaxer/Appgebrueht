@@ -1,6 +1,8 @@
 package mae.fhdo.appgebrueht.entities;
 
+import mae.fhdo.appgebrueht.R;
 import mae.fhdo.appgebrueht.entities.interfaces.IRezept;
+import java.util.List;
 
 /**
  * Created by Marvin Jakob.
@@ -14,7 +16,7 @@ public class Rezept implements IRezept{
     private String titel;
     private int likes; // Gesamtanzahl der Likes
     private String beschreibung;
-    private int foto;
+    private List<Integer> foto;
 
     private Rezept(){
         this._id = id_counter;
@@ -35,10 +37,10 @@ public class Rezept implements IRezept{
         this.beschreibung = beschreibung;
     }
 
-    public Rezept(String titel, String beschreibung , int foto)
+    public Rezept(String titel, String beschreibung , List<Integer> fotos)
     {
         this(titel, beschreibung);
-        this.foto = foto;
+        this.foto = fotos;
     }
 
     public int getId() {
@@ -70,10 +72,13 @@ public class Rezept implements IRezept{
     }
 
     public int getFoto() {
-        return foto;
+        if(foto != null && !foto.isEmpty()) return (foto.get(0)).intValue();
+        else return R.drawable.first;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void addFoto(int foto) {
+        this.foto.add(foto);
     }
+
+    public List<Integer> getFotos() { return foto;}
 }
